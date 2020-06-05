@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Vamsee Muppavarapu, SBDM">
+
+    <title>Data Planning</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/jquery-ui.min.css" rel="stylesheet">
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+
+    <style>
+        #layout {
+            width: fit-content;
+        }
+    </style>
+
+</head>
+
+<body class="text-center">
+
+
+    <!-- Logo and text -->
+    <nav class="navbar fixed-top bg-light" style="height:80px;">
+        <div class="col-sm-3">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/logo.png" width="auto" height="50" class="d-inline-block align-top" alt="ICRISAT">
+            </a>
+        </div>
+
+        <div class="col-sm-6">
+            <h2 class="py-3">Data Planning Portal</h2>
+        </div>
+        <div class="col-sm-3">
+            <img src="../assets/sbdm_logo.jpg" width="auto" height="50" class="float-right">
+            <h6 class="py-3 float-right">SBDM</h6>
+        </div>
+    </nav>
+    <section class="testimonial py-5" id="testimonial">
+        <div id="layout" class="container">
+            <div class="row ">
+                <div class="col-md-4 py-5 bg-success text-white text-center ">
+                    <div class=" ">
+                        <div class="card-body">
+                            <img src="../assets/registration.svg" style="width:30%">
+                            <h2 class="py-3">Metadata Requirements</h2>
+                            <p> Metadata requirements for submitting any data sets to SBDM for institutional data
+                                repository</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 py-5 border">
+                    <div class="card-body">
+                        <h5 class="card-header">Metadata Requirements</h5>
+                        <br>
+                        <form>
+                            <div class="form-group row">
+                                <label for="title" class="col-sm-2 col-form-label">Title</label>
+                                <div class="col-sm-10">
+                                    <input id="txtTitle" name="title" placeholder="Give a meaningful title"
+                                        class="form-control" type="text" required="true">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dataset" class="col-sm-2 col-form-label">Dataset Description</label>
+                                <div class="col-sm-10">
+                                    <input id="txtDataset" name="dataset"
+                                        placeholder="Description about data. Its purpose, nature, scope."
+                                        class="form-control" type="text" required="true">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="project" class="col-sm-2 col-form-label">Project Description</label>
+                                <div class="col-sm-10">
+                                    <input id="txtProject" name="project"
+                                        placeholder="Project information related to this data. Its purpose, nature, scope."
+                                        class="form-control" type="text" required="true">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="float-left card-subtitle">Authors</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+
+                                        <label for="name" class="col-sm-2 col-form-label">Name</label>
+
+                                        <div class="col">
+                                            <input id="txtFirstName" name="fname" placeholder="First Name"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                        <div class="col">
+                                            <input id="txtMiddleName" name="mname" placeholder="Middle Name"
+                                                class="form-control" type="text">
+                                        </div>
+                                        <div class="col">
+                                            <input id="txtLastName" name="lname" placeholder="Last Name"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="affiliation" class="col-sm-2 col-form-label">Affiliation</label>
+                                        <div class="col">
+                                            <input id="txtAffiliation" name="affiliation"
+                                                placeholder="Affiliated Institute" class="form-control" type="text"
+                                                required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="orcid" class="col-sm-2 col-form-label">ORCID</label>
+                                        <div class="col">
+                                            <input id="txtOrcid" name="orcid" placeholder="Mention ORCID"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h7 class="float-left card-subtitle">Author-2</h7>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+
+                                        <label for="name" class="col-sm-2 col-form-label">Name</label>
+
+                                        <div class="col">
+                                            <input id="txtFirstName" name="fname" placeholder="First Name"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                        <div class="col">
+                                            <input id="txtMiddleName" name="mname" placeholder="Middle Name"
+                                                class="form-control" type="text">
+                                        </div>
+                                        <div class="col">
+                                            <input id="txtLastName" name="lname" placeholder="Last Name"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="affiliation" class="col-sm-2 col-form-label">Affiliation</label>
+                                        <div class="col">
+                                            <input id="txtAffiliation" name="affiliation"
+                                                placeholder="Affiliated Institute" class="form-control" type="text"
+                                                required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="orcid" class="col-sm-2 col-form-label">ORCID</label>
+                                        <div class="col">
+                                            <input id="txtOrcid" name="orcid" placeholder="Mention ORCID"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary float-left" onclick="add_author();"> Add
+                                    Author</button>
+                            </div>
+                            <br><br>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="float-left card-subtitle">Keywords</h5>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="form-group row">
+                                        <label for="term" class="col-sm-2 col-form-label">Term</label>
+                                        <div class="col">
+                                            <input id="txtTerm" name="term" placeholder="Enter the keyword"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="vocabulary" class="col-sm-2 col-form-label">Vocabulary</label>
+                                        <div class="col">
+                                            <input id="txtVocab" name="vocab" placeholder="Ontology Reference"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form-group row">
+                                        <label for="term" class="col-sm-2 col-form-label">Term</label>
+                                        <div class="col">
+                                            <input id="txtTerm" name="term" placeholder="Enter the keyword"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="vocabulary" class="col-sm-2 col-form-label">Vocabulary</label>
+                                        <div class="col">
+                                            <input id="txtVocab" name="vocab" placeholder="Ontology Reference"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="float-left card-subtitle">Publications</h5>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="form-group row">
+                                        <label for="citaton" class="col-sm-2 col-form-label">Citation</label>
+                                        <div class="col">
+                                            <input id="txtCitation" name="citation" placeholder="Enter the citation"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="url" class="col-sm-2 col-form-label">URL</label>
+                                        <div class="col">
+                                            <input id="txtCitationURL" name="vocab" placeholder="Enter URL"
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="notes" class="col-sm-2 col-form-label">Special Notes</label>
+                                <div class="col-sm-10">
+                                    <input id="txtNotes" name="notes"
+                                        placeholder="Any special notes. Whether to keep it locked or open for public use?"
+                                        class="form-control" type="text" required="true">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="producer" class="col-sm-2 col-form-label">Producer</label>
+                                <div class="col-sm-5">
+                                    <input id="txtProducer" name="producer" placeholder="Producer" class="form-control"
+                                        type="text" required="true">
+                                </div>
+                                <div class="col-sm-5">
+                                    <input id="txtProducer" name="producer" placeholder="Producer" class="form-control"
+                                        type="text" required="true">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="float-left card-subtitle">Contributors</h5>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="form-group row">
+                                        <label for="ctype" class="col-sm-2 col-form-label">Type</label>
+                                        <div class="col">
+                                            <input id="txtContributorType" name="ctype" placeholder=""
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="cname" class="col-sm-2 col-form-label">Name</label>
+                                        <div class="col">
+                                            <input id="txtContributorName" name="cname" placeholder=""
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="float-left card-subtitle">Grant Information</h5>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="form-group row">
+                                        <label for="agency" class="col-sm-2 col-form-label">Grant Agency</label>
+                                        <div class="col">
+                                            <input id="txtGrantAgency" name="agency" placeholder="" class="form-control"
+                                                type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="agencynumber" class="col-sm-2 col-form-label">Grant Number</label>
+                                        <div class="col">
+                                            <input id="txtGrantNumber" name="agencynumber" placeholder=""
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+
+                                <label for="distributor" class="col-sm-2 col-form-label">Distributor</label>
+
+                                <div class="col">
+                                    <input id="txtDistributorName" name="dname" placeholder="Name" class="form-control"
+                                        type="text" required="true">
+                                </div>
+                                <div class="col">
+                                    <input id="txtDistributorAffiliation" name="daffiliation" placeholder="Affiliation"
+                                        class="form-control" type="text">
+                                </div>
+                                <div class="col">
+                                    <input id="txtAbbr" name="abbr" placeholder="Abbreviation" class="form-control"
+                                        type="text" required="true">
+                                </div>
+                                <div class="col">
+                                    <input id="txtdURL" name="abbr" placeholder="URL" class="form-control" type="text"
+                                        required="true">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="time" class="col-sm-2 col-form-label">Time Period</label>
+                                <div class='input-group date col-sm-5'>
+                                    <input type='text' id='datepicker' class="form-control"
+                                        placeholder="Start Date (mm/dd/yyyy)" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                <div class='input-group date col-sm-5'>
+                                    <input type='text' id='enddatepicker' class="form-control"
+                                        placeholder="End Date (mm/dd/yyyy)" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="float-left card-subtitle">Production Place</h5>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="form-group row">
+                                        <label for="prodname" class="col-sm-2 col-form-label">Name</label>
+                                        <div class="col">
+                                            <input id="txtProductionName" name="prodname" placeholder="Name of place, city, province/state, and country." class="form-control"
+                                                type="text" required="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <label for="lat" class="col-form-label">Latitude</label>
+                                        </div>
+                                        
+                                        <div class="col-sm-4">
+                                            <input id="txtLatitude" name="lat" placeholder=""
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label for="lat" class="col-form-label">Longitude</label>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input id="txtLongitude" name="long" placeholder=""
+                                                class="form-control" type="text" required="true">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="data" class="col-sm-2 col-form-label">Kind of data</label>
+                                <div class="col-sm-10">
+                                    <input id="txtDatakind" name="datakind"
+                                        placeholder="Type of data"
+                                        class="form-control" type="text" required="true">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="float-left card-subtitle">Software</h5>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="form-group row">
+                                        
+                                        <div class="col-sm-6">
+                                            <input id="txtSoftName" name="softname" placeholder="Name of the S/W used" class="form-control"
+                                                type="text" required="true">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input id="txtSoftversion" name="version" placeholder="Version" class="form-control"
+                                                type="text" required="true">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="data" class="col-sm-2 col-form-label float-left">Language</label>
+                                <div class="col-sm-10">
+                                    <input id="txtLanguage" name="language"
+                                        placeholder="Language data recorded in. Ex: English/ French etc."
+                                        class="form-control" type="text" required="true">
+                                </div>
+                                <!--
+                                <div class="form-check col-sm-5">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="english">English
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-sm-5">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="french">French
+                                    </label>
+                                  </div>
+                                -->
+                            </div>
+
+                            <br>
+
+                            <div class="form-group row">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
+                                                required>
+                                            <label class="form-check-label" for="invalidCheck2">
+                                                <small>By clicking Submit, you agree to our Terms & Conditions, Visitor
+                                                    Agreement and Privacy Policy.</small>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <button type="button" class="btn btn-success">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+        $(function () {
+            $("#enddatepicker").datepicker();
+        });
+    </script>
+    <script>
+        /*
+        var authors = 1;
+        function add_author() {
+
+            authors++;
+            var objTo = document.getElementById('education_fields')
+            var divtest = document.createElement("div");
+            divtest.setAttribute("class", "form-group removeclass" + room);
+            var rdiv = 'removeclass' + room;
+            divtest.innerHTML = '<div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Schoolname" name="Schoolname[]" value="" placeholder="School name"></div></div><div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Major" name="Major[]" value="" placeholder="Major"></div></div><div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Degree" name="Degree[]" value="" placeholder="Degree"></div></div><div class="col-sm-3 nopadding"><div class="form-group"><div class="input-group"> <select class="form-control" id="educationDate" name="educationDate[]"><option value="">Date</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option> </select><div class="input-group-btn"> <button class="btn btn-danger" type="button" onclick="remove_education_fields(' + room + ');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </button></div></div></div></div><div class="clear"></div>';
+
+            objTo.appendChild(divtest)
+        }
+        function remove_education_fields(rid) {
+            $('.removeclass' + rid).remove();
+        }
+        */
+    </script>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Copyright © 2020 SBDM, ICRISAT. All Rights Reserved</p>
+      <a href="http://data.icrisat.org"> data.icrisat.org</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+</body>
+
+</html>
