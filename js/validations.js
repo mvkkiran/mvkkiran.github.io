@@ -15,15 +15,22 @@
                 }
                 if (form.checkValidity() === true){
                     validateFormOnSubmit();
+                    event.preventDefault();
+                    event.stopPropagation();
                 }
             }); 
         });
     });
 })();
 
+$( document ).ready(function() {
+    document.getElementById("successAlert").style.display="none";
+});
 function validateFormOnSubmit() {
-    alert("Data Recorded Successfully")
+    //alert("Data Recorded Successfully")
     var formData = JSON.stringify($("#metaform").serializeArray());
     console.log(formData)
+    document.getElementById("successAlert").style.display="block";
+    setTimeout(window.location.reload.bind(window.location), 3000);
     
 }
