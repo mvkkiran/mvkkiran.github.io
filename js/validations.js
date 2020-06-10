@@ -113,7 +113,7 @@ $(document).ready(function () {
             </div>
         </div>
         <div class="form-group row">
-            <label for="vocabulary" class="col-sm-2 col-form-label">Vocabulary</label>
+            <label for="vocabulary" class="col-sm-2 col-form-label form-control-sm">Vocabulary</label>
             <div class="col-sm-10">
                 <input id="txtVocab" name="vocab[]" placeholder="Ontology Reference"
                     class="form-control" type="text" required="true">
