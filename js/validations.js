@@ -214,8 +214,18 @@ $(document).ready(function () {
 function validateFormOnSubmit() {
     //alert("Data Recorded Successfully")
     var formData = JSON.stringify($("#metaform").serializeArray());
+    var filename=document.getElementById("txtTitle").value;
     console.log(formData)
+    download(formData, filename+'.json', 'text/plain');
     document.getElementById("successAlert").style.display = "block";
     setTimeout(window.location.reload.bind(window.location), 3000);
 
+}
+//function to download form content to local system 
+function download(content, fileName, contentType) {
+    var a = document.createElement("a");
+    var file = new Blob([content], {type: contentType});
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
 }
