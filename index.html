@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Vamsee Muppavarapu, SBDM">
 
-    <title>Data Planning</title>
+    <title>Weather Dashboard</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jquery-ui.min.css" rel="stylesheet">
@@ -25,10 +25,10 @@
 
         @media only screen and (max-width: 768px) {
             label {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size:12px;
-        }
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                font-size: 12px;
+            }
 
             [class*="col-"] {
                 width: 100%;
@@ -50,461 +50,31 @@
         </div>
 
         <div class="col-sm-6">
-            <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">Data Planning Portal</h2>
+            <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">ICRISAT Weather Dashboard</h2>
         </div>
         <div class="col-sm-3">
             <img src="assets/sbdm_logo.jpg" width="auto" height="40" class=" d-inline-block">
             <h6 class="d-inline-block py-3 ">SBDM</h6>
         </div>
     </nav>
-    <section class="testimonial py-5" id="testimonial">
-        <div id="layout" class="container">
-            <div class="row ">
-                <div class="col-md-4 py-5 bg-success text-white text-center ">
-                    <div class=" ">
-                        <div class="card-body">
-                            <img src="assets/registration.svg" style="width:30%;padding-top:25%;">
-                            <h2 class="py-3">Metadata Requirements</h2>
-                            <p> Metadata requirements for submitting any data sets to SBDM for institutional data
-                                repository</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 py-5 border">
-                    <div class="card-body">
-                        <h5 class="card-header">Metadata Requirements</h5>
-
-                        <br>
-                        <form id="metaform" class="needs-validation" novalidate>
-                            <div class="form-group row">
-                                <label for="title" class="col-sm-2 col-form-label">Title</label>
-                                <div class="col-sm-10">
-                                    <input id="txtTitle" name="title" placeholder="Give a meaningful title"
-                                        class="form-control" type="text" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="dataset" class="col-sm-2 col-form-label">Dataset Description</label>
-                                <div class="col-sm-10">
-                                    <input id="txtDataset" name="dataset"
-                                        placeholder="Description about data. Its purpose, nature, scope."
-                                        class="form-control" type="text" required="true">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="project" class="col-sm-2 col-form-label">Project Description</label>
-                                <div class="col-sm-10">
-                                    <input id="txtProject" name="project"
-                                        placeholder="Project information related to this data. Its purpose, nature, scope."
-                                        class="form-control" type="text" required="true">
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="float-left card-subtitle">Author</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="form-group row">
-
-                                        <label for="name" class="col-sm-2 col-form-label">Name</label>
-
-                                        <div class="col">
-                                            <input id="txtFirstName" name="fname[]" placeholder="First Name"
-                                                class="form-control" type="text" required="true">
-                                        </div>
-                                        <div class="col">
-                                            <input id="txtMiddleName" name="mname[]" placeholder="Middle Name"
-                                                class="form-control" type="text">
-                                        </div>
-                                        <div class="col">
-                                            <input id="txtLastName" name="lname[]" placeholder="Last Name"
-                                                class="form-control" type="text" required="true">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="affiliation" class="col-sm-2 col-form-label">Affiliation</label>
-                                        <div class="col">
-                                            <input id="txtAffiliation" name="affiliation[]"
-                                                placeholder="Affiliated Institute" class="form-control" type="text"
-                                                required="true">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="orcid" class="col-sm-2 col-form-label">ORCID</label>
-                                        <div class="col">
-                                            <input id="txtOrcid" name="orcid[]" placeholder="Mention ORCID"
-                                                class="form-control" type="text" required="true">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="author_wrapper">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h7 class="float-left card-subtitle">Author-2</h7>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="form-group row">
-
-                                            <label for="name" class="col-sm-2 col-form-label">Name</label>
-
-                                            <div class="col">
-                                                <input id="txtFirstName" name="fname[]" placeholder="First Name"
-                                                    class="form-control" type="text">
-                                            </div>
-                                            <div class="col">
-                                                <input id="txtMiddleName" name="mname[]" placeholder="Middle Name"
-                                                    class="form-control" type="text">
-                                            </div>
-                                            <div class="col">
-                                                <input id="txtLastName" name="lname[]" placeholder="Last Name"
-                                                    class="form-control" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="affiliation" class="col-sm-2 col-form-label">Affiliation</label>
-                                            <div class="col">
-                                                <input id="txtAffiliation" name="affiliation[]"
-                                                    placeholder="Affiliated Institute" class="form-control" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="orcid" class="col-sm-2 col-form-label">ORCID</label>
-                                            <div class="col">
-                                                <input id="txtOrcid" name="orcid[]" placeholder="Mention ORCID"
-                                                    class="form-control" type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <br>
-                            <div class="form-group">
-                                <button type="button" class="btn btn-sm btn-primary float-left author_add_fields"> Add
-                                    Author</button>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="float-left card-subtitle">Keywords</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="keyword_wrapper">
-                                        <div class="form-group row">
-                                            <label for="term" class="col-sm-2 col-form-label">Term</label>
-                                            <div class="col">
-                                                <input id="txtTerm" name="term[]" placeholder="Enter the keyword"
-                                                    class="form-control" type="text" required="true">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="vocabulary" class="col-sm-2 col-form-label form-control-sm">Vocabulary</label>
-                                            <div class="col-sm-10">
-                                                <input id="txtVocab" name="vocab[]" placeholder="Ontology Reference"
-                                                    class="form-control" type="text" required="true">
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-primary float-left keyword_add_fields"> Add
-                                            keyword</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="float-left card-subtitle">Publications</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="publication_wrapper">
-                                        <div class="form-group row">
-                                            <label for="citaton" class="col-sm-2 col-form-label">Citation</label>
-                                            <div class="col">
-                                                <input id="txtCitation" name="citation[]"
-                                                    placeholder="Enter the citation" class="form-control" type="text"
-                                                    required="true">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="url" class="col-sm-2 col-form-label">URL</label>
-                                            <div class="col">
-                                                <input id="txtCitationURL" name="vocab[]" placeholder="Enter URL"
-                                                    class="form-control" type="text" required="true">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-primary float-left publication_add_fields">
-                                            Add publication</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row">
-                                <label for="notes" class="col-sm-2 col-form-label">Special Notes</label>
-                                <div class="col-sm-10">
-                                    <input id="txtNotes" name="notes"
-                                        placeholder="Any special notes. Whether to keep it locked or open for public use?"
-                                        class="form-control" type="text" required="true">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="producer" class="col-sm-2 col-form-label">Producer</label>
-                                <div class="col-sm-5">
-                                    <input id="txtProducer" name="producer" placeholder="Producer" class="form-control"
-                                        type="text" required="true">
-                                </div>
-                                <div class="col-sm-5">
-                                    <input id="txtProducer" name="producer" placeholder="Producer" class="form-control"
-                                        type="text" required="true">
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="float-left card-subtitle">Contributors</h5>
-                                </div>
-                                <div class="card-body">
-
-                                    <div class="form-group row">
-                                        <label for="ctype" class="col-sm-2 col-form-label">Type</label>
-                                        <div class="col">
-                                            <input id="txtContributorType" name="ctype" placeholder=""
-                                                class="form-control" type="text" required="true">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="cname" class="col-sm-2 col-form-label">Name</label>
-                                        <div class="col">
-                                            <input id="txtContributorName" name="cname" placeholder=""
-                                                class="form-control" type="text" required="true">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <br>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="float-left card-subtitle">Grant Information</h5>
-                                </div>
-                                <div class="card-body">
-
-                                    <div class="form-group row">
-                                        <label for="agency" class="col-sm-2 col-form-label">Grant Agency</label>
-                                        <div class="col">
-                                            <input id="txtGrantAgency" name="agency" placeholder="" class="form-control"
-                                                type="text" required="true">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="agencynumber" class="col-sm-2 col-form-label">Grant Number</label>
-                                        <div class="col">
-                                            <input id="txtGrantNumber" name="agencynumber" placeholder=""
-                                                class="form-control" type="text" required="true">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row">
-
-                                <label for="distributor" class="col-sm-2 col-form-label">Distributor</label>
-
-                                <div class="col">
-                                    <input id="txtDistributorName" name="dname" placeholder="Name" class="form-control"
-                                        type="text" required="true">
-                                </div>
-                                <div class="col">
-                                    <input id="txtDistributorAffiliation" name="daffiliation" placeholder="Affiliation"
-                                        class="form-control" type="text">
-                                </div>
-                                <div class="col">
-                                    <input id="txtAbbr" name="abbr" placeholder="Abbreviation" class="form-control"
-                                        type="text" required="true">
-                                </div>
-                                <div class="col">
-                                    <input id="txtdURL" name="abbr" placeholder="URL" class="form-control" type="text"
-                                        required="true">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="time" class="col-sm-2 col-form-label">Time Period</label>
-                                <div class='input-group date col-sm-5'>
-                                    <input type='text' id='datepicker' class="form-control"
-                                        placeholder="Start Date (mm/dd/yyyy)" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                                <div class='input-group date col-sm-5'>
-                                    <input type='text' id='enddatepicker' class="form-control"
-                                        placeholder="End Date (mm/dd/yyyy)" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="float-left card-subtitle">Production Place</h5>
-                                </div>
-                                <div class="card-body">
-
-                                    <div class="form-group row">
-                                        <label for="prodname" class="col-sm-2 col-form-label">Name</label>
-                                        <div class="col">
-                                            <input id="txtProductionName" name="prodname"
-                                                placeholder="Name of place, city, province/state, and country."
-                                                class="form-control" type="text" required="true">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-2">
-                                            <label for="lat" class="col-form-label">Latitude</label>
-                                        </div>
-
-                                        <div class="col-sm-4">
-                                            <input id="txtLatitude" name="lat" placeholder="" class="form-control"
-                                                type="text" required="true">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <label for="lat" class="col-form-label">Longitude</label>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <input id="txtLongitude" name="long" placeholder="" class="form-control"
-                                                type="text" required="true">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row">
-                                <label for="data" class="col-sm-2 col-form-label">Kind of data</label>
-                                <div class="col-sm-10">
-                                    <input id="txtDatakind" name="datakind" placeholder="Type of data"
-                                        class="form-control" type="text" required="true">
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="float-left card-subtitle">Software</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="software_wrapper">
-                                        <div class="form-group row">
-                                            <div class="col-sm-6">
-                                                <input id="txtSoftName" name="softname[]"
-                                                    placeholder="Name of the S/W used" class="form-control" type="text"
-                                                    required="true">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <input id="txtSoftversion" name="version[]" placeholder="Version"
-                                                    class="form-control" type="text" required="true">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="button"
-                                            class="btn btn-sm btn-primary float-left software_add_fields">
-                                            Add software</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row">
-                                <label for="data" class="col-sm-2 col-form-label float-left">Language</label>
-                                <div class="col-sm-10">
-                                    <input id="txtLanguage" name="language"
-                                        placeholder="Language data recorded in. Ex: English/ French etc."
-                                        class="form-control" type="text" required="true">
-                                </div>
-                            </div>
-
-                            <br>
-
-                            <div class="form-group row">
-                                <div class="form-group">
-                                    <div class="form-group">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
-                                                required>
-                                            <label class="form-check-label" for="invalidCheck2">
-                                                <small>By clicking Submit, you agree to our Terms & Conditions, Visitor
-                                                    Agreement and Privacy Policy.</small>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <button type="submit" class="btn btn-success">Submit</button>
-                            </div>
-                        </form>
-                        <br>
-
-                        <div id="successAlert" class="alert alert-success" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="alert-heading">Data Saved Successfully!</h4>
-                            <hr>
-                            <p class="mb-0">Your Data is recorded...</p>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <script type="text/javascript">
-
-        /*date picker JS*/
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-        $(function () {
-            $("#enddatepicker").datepicker();
-        });
-    </script>
-    <script>
-        /*
-        var authors = 1;
-        function add_author() {
-
-            authors++;
-            var objTo = document.getElementById('education_fields')
-            var divtest = document.createElement("div");
-            divtest.setAttribute("class", "form-group removeclass" + room);
-            var rdiv = 'removeclass' + room;
-            divtest.innerHTML = '<div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Schoolname" name="Schoolname[]" value="" placeholder="School name"></div></div><div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Major" name="Major[]" value="" placeholder="Major"></div></div><div class="col-sm-3 nopadding"><div class="form-group"> <input type="text" class="form-control" id="Degree" name="Degree[]" value="" placeholder="Degree"></div></div><div class="col-sm-3 nopadding"><div class="form-group"><div class="input-group"> <select class="form-control" id="educationDate" name="educationDate[]"><option value="">Date</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option> </select><div class="input-group-btn"> <button class="btn btn-danger" type="button" onclick="remove_education_fields(' + room + ');"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </button></div></div></div></div><div class="clear"></div>';
-
-            objTo.appendChild(divtest)
-        }
-        function remove_education_fields(rid) {
-            $('.removeclass' + rid).remove();
-        }
-        */
-    </script>
-
-
+    <div class='tableauPlaceholder' id='viz1591943025918' style='position: relative'><noscript><a href='#'><img alt=' '
+                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;we&#47;weathericrisat&#47;ICRISATWeatherData&#47;1_rss.png'
+                    style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='weathericrisat&#47;ICRISATWeatherData' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='no' />
+            <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;we&#47;weathericrisat&#47;ICRISATWeatherData&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' /></object></div>
+    <script
+        type='text/javascript'>                    var divElement = document.getElementById('viz1591943025918'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
     <!-- Footer -->
     <footer class="page-footer font-small blue">
